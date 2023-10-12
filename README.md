@@ -1,7 +1,5 @@
 # basketball_points_counter_app
 
-A new Flutter project.
-
 ## Getting Started
 
 This project used to count the basketball score for two teams.
