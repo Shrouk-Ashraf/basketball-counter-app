@@ -1,16 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class BasketballCounterScreen extends StatefulWidget {
+class BasketballCounterScreen extends StatelessWidget {
   const BasketballCounterScreen({Key? key}) : super(key: key);
-
-  @override
-  _BasketballCounterScreenState createState() =>
-      _BasketballCounterScreenState();
-}
-
-class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
-  int teamAScore = 0;
-  int teamBScore = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,20 +30,15 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                       height: 200,
                       child: FittedBox(
                         fit: BoxFit.contain,
-                        child: Text("$teamAScore",
-                            style: TextStyle(fontSize: 150)),
+                        child: Text("", style: TextStyle(fontSize: 150)),
                       ),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamAScore++;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 1 point",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -65,11 +52,7 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                         backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamAScore += 2;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 2 points",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -80,14 +63,10 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamAScore += 3;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 3 points",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -117,20 +96,15 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                       height: 200,
                       child: FittedBox(
                         fit: BoxFit.contain,
-                        child: Text("$teamBScore",
-                            style: TextStyle(fontSize: 150)),
+                        child: Text("", style: TextStyle(fontSize: 150)),
                       ),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamBScore++;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 1 point",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -141,14 +115,10 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamBScore += 2;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 2 points",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -159,14 +129,10 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          teamBScore += 3;
-                        });
-                      },
+                      onPressed: () {},
                       child: Text(
                         "Add 3 points",
                         style: TextStyle(color: Colors.black, fontSize: 18),
@@ -182,15 +148,10 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.orange,
+              backgroundColor: Colors.orange,
               minimumSize: Size(150, 50),
             ),
-            onPressed: () {
-              setState(() {
-                teamAScore = 0;
-                teamBScore = 0;
-              });
-            },
+            onPressed: () {},
             child: Text(
               "Reset",
               style: TextStyle(color: Colors.black, fontSize: 18),
