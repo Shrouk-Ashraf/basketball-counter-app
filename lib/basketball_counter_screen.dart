@@ -62,7 +62,7 @@ class _BasketballCounterScreenState extends State<BasketballCounterScreen> {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: Size(150, 50),
                       ),
                       onPressed: () {
