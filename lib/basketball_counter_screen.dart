@@ -5,21 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BasketballCounterScreen extends StatelessWidget {
   BasketballCounterScreen({Key? key}) : super(key: key);
-  int teamAScore = 0;
-  int teamBScore = 0;
+
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<CounterCubit, CounterState>(
-      listener: (context, state) {
-        if (state is CounterAIncrement) {
-          teamAScore = state.teamAScore;
-        } else if (state is CounterBIncrement) {
-          teamBScore = state.teamBScore;
-        } else {
-          teamAScore = 0;
-          teamBScore = 0;
-        }
-      },
+    return BlocBuilder<CounterCubit, CounterState>(
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
@@ -46,7 +35,8 @@ class BasketballCounterScreen extends StatelessWidget {
                           height: 200,
                           child: FittedBox(
                             fit: BoxFit.contain,
-                            child: Text("$teamAScore",
+                            child: Text(
+                                "${BlocProvider.of<CounterCubit>(context).teamAScore}",
                                 style: TextStyle(fontSize: 150)),
                           ),
                         ),
@@ -122,7 +112,8 @@ class BasketballCounterScreen extends StatelessWidget {
                           height: 200,
                           child: FittedBox(
                             fit: BoxFit.contain,
-                            child: Text("$teamBScore",
+                            child: Text(
+                                "${BlocProvider.of<CounterCubit>(context).teamBScore}",
                                 style: TextStyle(fontSize: 150)),
                           ),
                         ),

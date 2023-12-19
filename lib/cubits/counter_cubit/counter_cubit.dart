@@ -10,12 +10,12 @@ class CounterCubit extends Cubit<CounterState> {
   int teamBScore = 0;
   teamAIncrement({required int buttonNumber}) {
     teamAScore += buttonNumber;
-    emit(CounterAIncrement(teamAScore: teamAScore));
+    emit(CounterAIncrement());
   }
 
   teamBIncrement({required int buttonNumber}) {
     teamBScore += buttonNumber;
-    emit(CounterBIncrement(teamBScore: teamBScore));
+    emit(CounterBIncrement());
   }
 
   clearScore() {
