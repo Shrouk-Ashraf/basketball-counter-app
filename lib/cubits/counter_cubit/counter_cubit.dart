@@ -18,7 +18,7 @@ class CounterCubit extends Cubit<CounterState> {
     emit(CounterBIncrement(teamBScore: teamBScore));
   }
 
-  clear() {
+  clearScore() {
     teamAScore = 0;
     teamBScore = 0;
     emit(CounterClear());

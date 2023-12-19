@@ -15,6 +15,9 @@ class BasketballCounterScreen extends StatelessWidget {
           teamAScore = state.teamAScore;
         } else if (state is CounterBIncrement) {
           teamBScore = state.teamBScore;
+        } else {
+          teamAScore = 0;
+          teamBScore = 0;
         }
       },
       builder: (context, state) {
@@ -52,7 +55,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamAIncrement(buttonNumber: 1);
+                          },
                           child: Text(
                             "Add 1 point",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -66,7 +72,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamAIncrement(buttonNumber: 2);
+                          },
                           child: Text(
                             "Add 2 points",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -80,7 +89,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamAIncrement(buttonNumber: 3);
+                          },
                           child: Text(
                             "Add 3 points",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -119,7 +131,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamBIncrement(buttonNumber: 1);
+                          },
                           child: Text(
                             "Add 1 point",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -133,7 +148,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamBIncrement(buttonNumber: 2);
+                          },
                           child: Text(
                             "Add 2 points",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -147,7 +165,10 @@ class BasketballCounterScreen extends StatelessWidget {
                             backgroundColor: Colors.orange,
                             minimumSize: Size(150, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            BlocProvider.of<CounterCubit>(context)
+                                .teamBIncrement(buttonNumber: 3);
+                          },
                           child: Text(
                             "Add 3 points",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -166,7 +187,9 @@ class BasketballCounterScreen extends StatelessWidget {
                   backgroundColor: Colors.orange,
                   minimumSize: Size(150, 50),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  BlocProvider.of<CounterCubit>(context).clearScore();
+                },
                 child: Text(
                   "Reset",
                   style: TextStyle(color: Colors.black, fontSize: 18),
