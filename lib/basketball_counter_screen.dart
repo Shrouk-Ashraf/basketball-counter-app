@@ -30,7 +30,7 @@ class BasketballCounterScreen extends StatelessWidget {
                       height: 200,
                       child: FittedBox(
                         fit: BoxFit.contain,
-                        child: Text("", style: TextStyle(fontSize: 150)),
+                        child: Text("0", style: TextStyle(fontSize: 150)),
                       ),
                     ),
                     ElevatedButton(
@@ -96,7 +96,7 @@ class BasketballCounterScreen extends StatelessWidget {
                       height: 200,
                       child: FittedBox(
                         fit: BoxFit.contain,
-                        child: Text("", style: TextStyle(fontSize: 150)),
+                        child: Text("0", style: TextStyle(fontSize: 150)),
                       ),
                     ),
                     ElevatedButton(
